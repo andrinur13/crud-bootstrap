@@ -2,6 +2,7 @@
 
     include "koneksi.php";
 
+
     $id_buah = $_GET['id'];
     $syntax_edit = "SELECT * FROM buah WHERE id = '$id_buah'";
     $kueri_buah = mysqli_query($conn, $syntax_edit);
