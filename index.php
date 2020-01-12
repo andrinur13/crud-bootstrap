@@ -1,3 +1,16 @@
+<?php  
+
+    include "koneksi.php";
+
+    $kueri = mysqli_query($conn, "SELECT * FROM buah");
+    $tampungbuah = [];
+
+    while($row = mysqli_fetch_assoc($kueri)) {
+        $tampungbuah[] = $row;
+    }
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,11 +23,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-
+    <br>
     <div class="container">
         <h1 class="text-center">Toko Buah</h1>
     </div>
-
+    <br>
     <div class="container">
         <table class="table">
             <thead>
@@ -26,11 +39,16 @@
                 </tr>
             </thead>
             <tbody>
+                <?php foreach($tampungbuah as $buah) : ?>
+
                 <tr>
-                    <td scope="row">1</td>
-                    <td>Jeruk Mandarin</td>
-                    <td>500000</td>
+                    <td> <?php echo $buah['id']; ?> </td>
+                    <td> <?php echo $buah['nama_buah']; ?> </td>
+                    <td> <?php echo $buah['harga_buah']; ?> </td>
+                    <td> <a href="edit.php?&id=<?=$buah['id']; ?>" class="btn btn-warning">Edit</a> <a href="hapus.php?&id=<?=$buah['id']; ?>" class="btn btn-danger">Hapus</a> </td>
                 </tr>
+
+                <?php endforeach; ?>
             </tbody>
         </table>
     </div>
