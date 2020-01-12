@@ -11,7 +11,29 @@
   </head>
   <body>
 
-    
+    <div class="container">
+        <h1 class="text-center">Toko Buah</h1>
+    </div>
+
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nama Buah</th>
+                    <th>Harga Buah</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">1</td>
+                    <td>Jeruk Mandarin</td>
+                    <td>500000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
