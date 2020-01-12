@@ -42,6 +42,7 @@
             </div>
 
             <input type="submit" class="btn btn-success" name="tambah" value="Tambah Data">
+            <a href="index.php" class="btn btn-danger">Batal</a>
 
         </form>
     </div>

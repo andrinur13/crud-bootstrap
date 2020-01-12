@@ -72,7 +72,7 @@
             <?php endforeach; ?>
 
             <input type="submit" class="btn btn-primary" name="perbarui" value="Perbarui Data">
-
+            <a href="index.php" class="btn btn-danger">Batal</a>
         </form>
 
     </div>
